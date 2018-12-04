@@ -6,30 +6,28 @@ Ni skriva tre funktioner: `filter`, `exclude`, och `unique`.
 
 Filtrera: `filter`
 
-`filter` tar en lista (`array:`) och ett värde (`value:`) *som argument*, och *returnerar* en ny lista där alla andra värden i `array:` än `value:` saknas.
+`filter` tar en lista (`array`) och ett värde (`value`) *som argument*, och *returnerar* en ny lista där alla andra värden i `array` än `value` saknas.
 
 Utesluta: `exclude`
 
-`exclude` tar en lista (`array:`) och ett värde (`value:`) *som argument*, och *returnerar* en ny lista där alla värden i `array:` som är  samma som `value:` saknas.
+`exclude` tar en lista (`array`) och ett värde (`value`) *som argument*, och *returnerar* en ny lista där alla värden i `array` som är  samma som `value` saknas.
 
 Unika: `unique`
 
-`unique` tar en lista (`array:`) *som argument*, och *returnerar* en ny lista där varje värde från `array:` enbart förekommer en gång.
+`unique` tar en lista (`array`) *som argument*, och *returnerar* en ny lista där varje värde från `array` enbart förekommer en gång.
 
 ### Exempel ###
 
 #### Ruby ####
 
-    filter(array: ['bosse', 'daniel', 'edvard', 'bosse', 'bosse'], value: 'bosse')
+    filter(['bosse', 'daniel', 'edvard', 'bosse', 'bosse'], 'bosse')
     #=> ['bosse', 'bosse', 'bosse']
 
-    exclude(array: ['bosse', 'daniel', 'edvard', 'bosse', 'bosse'], value: 'bosse')
+    exclude(['bosse', 'daniel', 'edvard', 'bosse', 'bosse'], 'bosse')
     #=> ['daniel', 'edvard']
 
-    unique(array: ['bosse', 'daniel', 'edvard', 'bosse', 'bosse'], 'bosse')
+    unique(['bosse', 'daniel', 'edvard', 'bosse', 'bosse'])
     #=> ['bosse', 'daniel', 'edvard']
-
-
 
 ### Flödesschema ###
 
@@ -41,7 +39,7 @@ Testa flödesschemat med penna och papper
 
 Kör `bundle install` i projektets rotmapp om du inte redan har alla gems installerade.
 
-Kör `ruby test\test_funktionens_namn.rb` eller `rake test` för att köra alla testerna.
+Kör `rake` eller `rake test function_name` för att köra testerna.
 
 ### Länkar ###
 
